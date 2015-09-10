@@ -1,24 +1,24 @@
 <link rel="import" href="../iron-input/iron-input.html">
 <dom-module id="input-datetime">
-  <style>
-    :host {
-      display: block;
-    }
-
-    input[type="datetime-local"] {
-      font-family: inherit;
-    }
-
-    .button {
-      @apply(--input-datetime-button);
-    }
-  </style>
   <template>
+    <style>
+      :host {
+        display: block;
+      }
+  
+      input[type="datetime-local"] {
+        font-family: inherit;
+      }
+  
+      .button {
+        @apply(--input-datetime-button);
+      }
+    </style>
 
-      <input is="iron-input" type="datetime-local" step="60"
-        bind-value="{{parsed_datetime}}" on-change="on_change">
+    <input is="iron-input" type="datetime-local" step="60"
+      bind-value="{{parsed_datetime}}" on-change="on_change">
 
-      <button id="now" class="button" on-click="on_click_now">{{label}}</button>
+    <button id="now" class="button" on-click="on_click_now">{{label}}</button>
 
   </template>
 </dom-module>
